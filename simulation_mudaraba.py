@@ -55,7 +55,6 @@ lambda_rates = np.array([
     4, 6, 2, 5, 4, 3, 2, 4, 3, 2, 1, 5, 6, 4, 3, 5, 2, 3, 1, 2, 3, 4, 3, 5, 6
 ], dtype=float)
 
-# Transition descriptions - Ganti SSB ke DPS
 transition_desc = [
     "T₀:  M₀→M₁   Partnership application submitted",
     "T₁:  M₁→M₂   Blockchain recording (accepted)",
@@ -84,7 +83,6 @@ transition_desc = [
     "T₂₄: M₂₁→M₀   Partnership concluded → return to initial",
 ]
 
-# State descriptions - Ganti SSB ke DPS
 state_descriptions = [
     "Initial state (idle)",
     "Partnership data is entered and accepted by the system",
@@ -138,7 +136,7 @@ def build_generator_matrix(lam):
       M₄  →  M₅  (λ₅=3)   |  M₄ → M₃ (λ₆=2)     [rejection: negotiation]
       M₅  →  M₆  (λ₇=4)
       M₆  →  M₇  (λ₈=3)
-      M₇  →  M₈  (λ₉=2)   |  M₇ → M₆ (λ₁₀=1)    [rejection: SSB evaluation]
+      M₇  →  M₈  (λ₉=2)   |  M₇ → M₆ (λ₁₀=1)    [rejection: DPS evaluation]
       M₈  →  M₉  (λ₁₁=5)
       M₉  →  M₁₀ (λ₁₂=6)
       M₁₀ →  M₁₁ (λ₁₃=4)
