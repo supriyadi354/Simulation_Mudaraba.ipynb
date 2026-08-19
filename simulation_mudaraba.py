@@ -388,7 +388,7 @@ def plot_figure6(sens_results, lambda18_values, save_dir):
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.09, 3.54))
     c_bn = '#8B1A1A'
 
-    # (a) Bottleneck Probability vs λ₁₈
+    # (a) Bottleneck Probability 
     ax1.plot(l18_vals, p15, 'o-', color=c_bn,
              markerfacecolor='white', markeredgecolor=c_bn,
              markeredgewidth=1.4, markersize=6.5, linewidth=1.8,
@@ -521,7 +521,7 @@ def plot_figure1_improved(sens_results, lambda18_values, save_dir):
     plt.show()
     return fig
 
-# Menjalankan analisis dan menampilkan gambar Figure 1 yang telah dilengkapi
+# Menjalankan analisis
 l18_test_values = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 4.0, 5.0]
 sens_data = sensitivity_analysis(lambda_rates, l18_test_values)
 plot_figure1_improved(sens_data, l18_test_values, 'figures')
